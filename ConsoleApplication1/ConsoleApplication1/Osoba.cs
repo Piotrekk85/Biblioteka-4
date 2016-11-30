@@ -17,12 +17,9 @@ namespace ConsoleApplication14
         public Osoba(string im, string naz)
         {
 
-            imie = im;
-            nazwisko = naz;
-
-
-
-
+            this.imie = im;  //brak this
+            this.nazwisko = naz; //brak this
+            
         }
     }
 }

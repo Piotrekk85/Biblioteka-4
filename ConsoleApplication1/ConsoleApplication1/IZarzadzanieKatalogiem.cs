@@ -9,7 +9,7 @@ namespace ConsoleApplication14
     interface IZarzadzanieKatalogiem
     {
         void WyszukajPoTytule(string tytul);
-        void WyszukajPold(int Id);
+        void WyszukajPoId(int Id); //literówka
         void WypiszWszystko();
     }
 }

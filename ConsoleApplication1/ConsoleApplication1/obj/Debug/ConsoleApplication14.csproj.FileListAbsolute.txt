@@ -4,3 +4,9 @@ D:\Haraf\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.e
 D:\Haraf\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 D:\Haraf\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 D:\Haraf\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication14.csprojResolveAssemblyReference.cache
+C:\Users\Piotrek\Desktop\Cw7\10\Biblioteka-master\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Piotrek\Desktop\Cw7\10\Biblioteka-master\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Piotrek\Desktop\Cw7\10\Biblioteka-master\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Piotrek\Desktop\Cw7\10\Biblioteka-master\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Piotrek\Desktop\Cw7\10\Biblioteka-master\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Piotrek\Desktop\Cw7\10\Biblioteka-master\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication14.csprojResolveAssemblyReference.cache

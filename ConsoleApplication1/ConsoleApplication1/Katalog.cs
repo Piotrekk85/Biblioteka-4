@@ -11,40 +11,67 @@ namespace ConsoleApplication14
         private string dzialTematyczny;
         public List<Pozycja> listaPozycji;
        
-        public Katalog(string dzialTem,List<Pozycja> listPoz)
+        public Katalog(string dzialTem) //listaPozycji jest polem, więc nie musi być parametrem
         {
-            dzialTematyczny = dzialTem;
-            listaPozycji = listPoz;
+            this.dzialTematyczny = dzialTem;
+            listaPozycji = new List<Pozycja>(); //nie taka składnia
 
         }
-        public void  DodajPozycje(string dzial,List<Pozycja> pozycja) 
-        {
-            dzialTematyczny = dzial;
-            listaPozycji = pozycja;        
-        }
-       public void WyszukajPoTytule(string tytul)
-        {
 
-            tytul = Console.ReadLine();
-           
+        public Katalog() { }
 
-        
-        }
-       public void WyszukajPold(int Id)
+        public void DodajPozycje(Pozycja pozycja) //to nie jest dobra praktyka by pole w klasie było parametrem w metodzie
         {
-            Id = Convert.ToInt32(Console.ReadLine());
-        
+            listaPozycji.Add(pozycja);
         }
-       public void WypiszWszystko()
+
+        //metoda na dodanie ksiązki z parametrami
+        public void DodajPozycje(string imie, string nazwisko, string tytul, int id, string wydawnictwo, int rokWydania, int liczbaStron)
         {
-        
-        
+            listaPozycji.Add(new Ksiazka(imie, nazwisko, tytul, id, wydawnictwo, rokWydania, liczbaStron));
         }
-        public  void WypiszInfo() 
+
+        //metoda na dodanie czasopisma z parametrami
+        public void DodajPozycje(int numer, string tytuł, int id, string wydawnictwo, int rokWydania)
         {
-            Console.WriteLine("Dzial: "+dzialTematyczny);
-        
-        
+            listaPozycji.Add(new Czasopismo(numer, tytuł, id, wydawnictwo, rokWydania));
         }
+
+        //metoda wyszukiwania po tytule (teoretycznie możemy otrzymac kilka rzeczy więc wracamy listę)
+        public void WyszukajPoTytule(string tytuł)
+        {
+            List<Pozycja> wysz = listaPozycji.FindAll(x => x.PobierzTytul() == tytuł);
+            foreach (var element in wysz)
+            {
+                element.WypiszInfo();
+                for (int i = 0; i < 55; i++) Console.Write("*");
+                Console.WriteLine("*");
+            }
+        }
+
+
+        //emtoda wyszukiwania po id, tu wynik mamy jeden po id zwykle jest unikalne
+        public void WyszukajPoId(int id)
+        {
+            Pozycja wyszuk = listaPozycji.Find(x => x.PobierzId() == id);
+            wyszuk.WypiszInfo();
+        }
+
+        public void WypiszWszystko()
+        {
+            foreach (var element in listaPozycji)
+            {
+                element.WypiszInfo();
+                for (int i = 0; i < 55; i++) Console.Write("*");
+                Console.WriteLine("*");
+            }
+        }
+
+        //public  void WypiszInfo() to zbędne
+        //{
+        //    Console.WriteLine("Dzial: "+dzialTematyczny);
+        
+        
+        //}
     }
 }
